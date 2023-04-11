@@ -1,0 +1,6 @@
+double free + uaf (note array is not cleared when deleted)
+
+struct note {
+  int (* print)(void* ptr);
+  void* buffer;
+};
