@@ -7,13 +7,15 @@ KNOB<std::string> log_file(KNOB_MODE_WRITEONCE, "pintool", "o", "count.out", "ou
 unsigned long count = 0;
 
 
-
 int main(int argc, char** argv) {
+  PIN_InitSymbols();
   if (PIN_Init(argc, argv)) {
     fprintf(stderr, "This tool profiles the binary\n%s",
       KNOB_BASE::StringKnobSummary().c_str());
     return -1;
   }
+
+  PIN_SetSyntaxIntel();
 
   INS_AddInstrumentFunction([](INS i, void* v) -> void {
     // instrument a call before every instruction via IPOINT_BEFORE
