@@ -36,6 +36,7 @@ as a system call instruction in the following code:
 `0x50f` in little endian format is `0x0f05`, which is the syscall instruction. We can use
 this as a gadget as it does not check for alignment.
 
+
 ## null byte string check
 
 we can bypass or mess with various string functions by passing a null byte.
