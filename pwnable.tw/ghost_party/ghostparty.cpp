@@ -15,14 +15,11 @@ using namespace std;
 #define FLAGLEN 32
 #define TIMEOUT 60
 
-/*
-  copy constructor shallow copy leads to uaf
-*/
 class Ghost {
 	public :
 		Ghost():name(NULL),age(0){
 			type = "Ghost";
-		}
+		};
 
 		Ghost(const Ghost &copyghost){
 			name = new char[strlen(copyghost.name) + 1] ;

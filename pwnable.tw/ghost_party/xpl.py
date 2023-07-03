@@ -12,15 +12,10 @@ s = lambda x, r="" : \
 sl = lambda x, r="" : \
   p.sendlineafter(r, x) if r else p.sendline(x)
 
-def option_add(
-    name: str=b'A'*8,
-    age=0,
-    msg=b'A'*8,
-    kind=b'A'*8,
-    attr=b'A'*8
-  ):
-  sl(b'1', b'Your choice :')
-  sl(name, b':')
+def ghost_add(name, age, message, ghost, **kwargs):
+  s(b'1', b'Your choice :')
+
+
 
 
 p.interactive()
