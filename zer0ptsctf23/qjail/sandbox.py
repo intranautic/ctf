@@ -7,6 +7,6 @@ if __name__ == '__main__':
         print(f"Usage: {sys.argv[0]} <ELF>")
         sys.exit(1)
 
-    cmd = ['./lib/ld-2.31.so', '--library-path', '/lib', sys.argv[1]]
-    ql = qiling.Qiling(cmd, console=False, rootfs='.')
+#    cmd = ['./lib/ld-2.31.so', '--library-path', '/lib', sys.argv[1]]
+    ql = qiling.Qiling([sys.argv[1]], console=False, rootfs='.')
     ql.run()

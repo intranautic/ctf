@@ -1,3 +1,8 @@
+// corrupt envp causes execve to fail
+// no sanity check so cowsay doesnt terminate the process
+// repeat for password then we reach the shell spawn
+
+
 #include <fcntl.h>
 #include <stdlib.h>
 #include <string.h>
