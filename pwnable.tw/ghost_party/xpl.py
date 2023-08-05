@@ -7,7 +7,10 @@ libc = ELF('libc_64.so.6', checksec=0)
 if len(argv) >= 2 and argv[1] == '-r':
   p = remote('chall.pwnable.tw', 10401)
 else:
-  p = binary.process(env={})
+  p = process(
+    ['/glibc/2.23/64/lib/ld-2.23.so', './ghostparty'],
+    env={'LD_PRELOAD': 'libc_64.so.6'}
+  )
 s = lambda x, r="" : \
   p.sendafter(r, x) if r else p.send(x)
 sl = lambda x, r="" : \
