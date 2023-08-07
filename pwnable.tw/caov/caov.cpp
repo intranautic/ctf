@@ -154,6 +154,7 @@ void set_name()
 
 void edit()
 {
+    // local stack object destructed
     Data old;
     old = *D;
     D->edit_data();
@@ -161,6 +162,7 @@ void edit()
     old.info();
     cout << "\nYour data info after editing:" << endl;
     D->info();
+    // destructor called
 }
 
 void playground()

