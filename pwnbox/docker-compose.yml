@@ -1,0 +1,12 @@
+version: '1'
+services:
+  pwnbox:
+    container_name: pwnbox
+    image: intranautic/pwnbox:latest
+    security_opt:
+      - seccomp:unconfined
+    cap_add:
+      - SYS_PTRACE
+    ports:
+      - '23946:23946'
+
