@@ -2,6 +2,7 @@ FROM skysider/pwndocker:latest
 LABEL maintainer="intranautic <intranautic@gmail.com>"
 
 RUN apt install -y zip unzip zsh gettext
+RUN chsh root -s /usr/bin/zsh
 RUN git clone https://github.com/intranautic/ctf ~/ctf
 
 # setup dotfiles
