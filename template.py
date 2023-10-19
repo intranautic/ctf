@@ -7,10 +7,12 @@ if len(argv) >= 2 and argv[1] == '-r':
   p = remote()
 else:
   p = binary.process(env={})
-s = lambda x, r="" : \
+s = lambda x, r="": \
   p.sendafter(r, x) if r else p.send(x)
-sl = lambda x, r="" : \
+sl = lambda x, r="": \
   p.sendlineafter(r, x) if r else p.sendline(x)
+log_addr = lambda name, addr: \
+  log.info("Leaked %s address: %#lx"%(name, addr))
 
 p.interactive()
 
