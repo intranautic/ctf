@@ -12,7 +12,7 @@ s = lambda x, r="": \
 sl = lambda x, r="": \
   p.sendlineafter(r, x) if r else p.sendline(x)
 log_addr = lambda name, addr: \
-  log.info("Leaked %s address: %#lx"%(name, addr))
+  log.info("%s: %#lx"%(name, addr))
 
 p.interactive()
 
