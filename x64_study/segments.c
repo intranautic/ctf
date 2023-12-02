@@ -6,12 +6,6 @@
 MODULE_LICENSE("GPL");
 
 static void parse_selector(const char* name, uint16_t reg) {
-  printk("%s: %hu {\n\tIndex: %d\n\tTI: %d\n\tRPL: %d\n}\n",
-    name,
-    reg,
-    reg >> 3,
-    );
-
   return;
 }
 
