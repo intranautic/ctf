@@ -1,0 +1,1 @@
+savedcmd_/home/runner/ctf/study/x64_study/msrs.ko := ld -r -m elf_x86_64 --compress-debug-sections=zstd -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T scripts/module.lds -o /home/runner/ctf/study/x64_study/msrs.ko /home/runner/ctf/study/x64_study/msrs.o /home/runner/ctf/study/x64_study/msrs.mod.o;  true
