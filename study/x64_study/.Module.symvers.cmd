@@ -1,1 +1,0 @@
-savedcmd_/home/runner/ctf/study/x64_study/Module.symvers :=  scripts/mod/modpost  -a    -N  -o /home/runner/ctf/study/x64_study/Module.symvers -T /home/runner/ctf/study/x64_study/modules.order -i Module.symvers -e 
