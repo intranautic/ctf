@@ -11,6 +11,7 @@ RUN mkdir -p ~/.config && cp -r /tmp/dot/nvim ~/.config/nvim
 RUN cp /tmp/dot/tmux.conf ~/.tmux.conf
 
 # install zsh shell
+RUN rm -rf $HOME/.oh-my-zsh
 RUN wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 RUN chmod +x install.sh && ./install.sh --unattended
 RUN git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
