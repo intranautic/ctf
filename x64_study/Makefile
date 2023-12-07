@@ -1,4 +1,4 @@
-obj-m += msrs.o segments.o
+obj-m += msrs.o vmxmsrs.o
 
 PWD := $(CURDIR)
 
