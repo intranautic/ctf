@@ -1,4 +1,4 @@
-obj-m += msrs.o vmxmsrs.o
+obj-m += msrs.o chardev.o
 
 PWD := $(CURDIR)
 
@@ -8,7 +8,12 @@ all:
 clean:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
 
-run: all
+load:
 	./scripts/loadall.sh
 
-.PHONY: clean run
+unload:
+	./scripts/unloadall.sh
+
+run: all load unload
+
+.PHONY: clean load unload run

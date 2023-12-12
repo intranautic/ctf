@@ -4,29 +4,29 @@
 
 #include <asm/msr-index.h>
 
+#include "debug.h"
 
 MODULE_LICENSE("GPL");
 
 static int __init msrs_init(void) {
-  printk("[msrs]: kernel module loaded\n");
+  dbg_print("kernel module loaded");
   int64_t efer = __rdmsr(MSR_EFER);
-  printk("IA32_EFER = %#llx\n", efer);
+  dbg_print("IA32_EFER = %#llx", efer);
   if (efer & EFER_LME)
-    printk("IA32_EFER.LME=1\n");
+    dbg_print("IA32_EFER.LME=1");
   if (efer & EFER_LMA)
-    printk("IA32_EFER.LMA=1\n");
+    dbg_print("IA32_EFER.LMA=1");
   if (efer & EFER_SVME)
-    printk("IA32_EFER.SVME=1\n");
+    dbg_print("IA32_EFER.SVME=1");
 
-  printk("FS_BASE = %#llx\nGS_BASE = %#llx\n",
-    __rdmsr(MSR_FS_BASE),
-    __rdmsr(MSR_GS_BASE));
-
+  dbg_print("FS_BASE = %#llx", __rdmsr(MSR_FS_BASE));
+  dbg_print("GS_BASE = %#llx", __rdmsr(MSR_GS_BASE));
   return 0;
 }
 
 static void __exit msrs_exit(void) {
-  printk("[msrs]: kernel module unloaded\n");
+  dbg_print("kernel module unloaded");
+  return;
 }
 
 module_init(msrs_init);

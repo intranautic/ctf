@@ -1,8 +1,4 @@
-# random pwn notes
-
-random notes for pwn
-
-## gadget fun
+# unxpl pwn notes
 
 didnt realize this, but we can control the ax register via calling other functions
 since the return value is passed through ax. for example we can read() n bytes to whatever
