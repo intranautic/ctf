@@ -1,4 +1,4 @@
-obj-m += msrs.o chardev.o
+obj-m += chardev.o
 
 PWD := $(CURDIR)
 

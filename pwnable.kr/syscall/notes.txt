@@ -1,0 +1,12 @@
+no kaslr, smep, smap
+unbounded write from in->out, writes bytes regardless if not ascii
+we have unlimited write of all bytes excluding range [a-z]
+remote is running Linux 3.11.4 armv7l, no paging??
+since no smep, we could use sys_upper to overwrite syscall table with
+userspace function?
+wtf ok we just need to overwrite syscall table and invoke syscalls im braindead..
+
+commit_creds symbol last byte of addr falls within range 0x6c, so we can overwrite
+the commit_creds-12 with nops with proper alignment since arm linux kernel v3 does
+not have write protection on kernel .text.
+
