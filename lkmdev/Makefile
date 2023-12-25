@@ -1,4 +1,4 @@
-obj-m += chardev.o
+obj-m += segments.o
 
 PWD := $(CURDIR)
 

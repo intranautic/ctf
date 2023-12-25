@@ -1,0 +1,9 @@
+rootkit disabled write prot and hooks syscall table each of the hooks check if flag
+is present in the path. we have uid/gid=0 on remote machine, we just need to bypass 
+this check. removing itself from the module linked list? remote lsmod or
+/proc/modules is not showing the lkm.
+
+we can load our own kernel driver?  easy, go one level lower and just fucking
+read manually via vfs api
+
+build is a pain in the fucking ass, just patch the original kernel module on server
