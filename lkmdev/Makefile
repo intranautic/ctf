@@ -1,4 +1,4 @@
-obj-m += segments.o
+obj-m += $(MODULE_NAME).o
 
 PWD := $(CURDIR)
 
@@ -9,10 +9,10 @@ clean:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
 
 load:
-	./scripts/loadall.sh
+	./scripts/load.sh insmod $(MODULE_NAME)
 
 unload:
-	./scripts/unloadall.sh
+	./scripts/load.sh rmmod $(MODULE_NAME)
 
 run: all load unload
 
