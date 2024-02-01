@@ -8,7 +8,7 @@
 
 MODULE_LICENSE("GPL");
 
-static const void** sys_call_table;
+
 
 static int __init hookmsr_init(void) {
   return 0;

@@ -1,4 +1,5 @@
-obj-m += $(MODULE_NAME).o
+MODULE := smpcall
+obj-m += $(MODULE).o
 
 PWD := $(CURDIR)
 
@@ -9,10 +10,14 @@ clean:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
 
 load:
-	./scripts/load.sh insmod $(MODULE_NAME)
+	sudo dmesg -C
+	sudo insmod $(MODULE).ko
+	sudo dmesg -H
 
 unload:
-	./scripts/load.sh rmmod $(MODULE_NAME)
+	sudo dmesg -C
+	sudo rmmod $(MODULE).ko
+	sudo dmesg -H
 
 run: all load unload
 
