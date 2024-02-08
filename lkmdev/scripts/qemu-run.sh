@@ -17,11 +17,10 @@ fi
 qemu-system-x86_64 \
   -kernel $BZIMAGE \
   -initrd $2 \
-  -append "console=ttyS0 kaslr panic=-1" \
+  -append "console=ttyS0 nokaslr kptr_restrict=2 panic=-1" \
   -monitor none \
   -nographic \
   -no-reboot \
   -cpu qemu64,+smep,+smap \
   -m 256M \
   -s
-

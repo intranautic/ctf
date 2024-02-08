@@ -1,24 +1,35 @@
-MODULE := smpcall
-obj-m += $(MODULE).o
-
+MODULE_NAME := smpcall
+MODULE_LINUX=/lib/modules/$(shell uname -r)/build
+ROOTFS=./rootfs
+INITRAMFS=initramfs.cpio
+LINUX_BUILD=$(MODULE_LINUX)
 PWD := $(CURDIR)
 
+obj-m += $(MODULE_NAME).o
+
 all:
-	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
+	make -C $(MODULE_LINUX) M=$(PWD) modules
 
 clean:
-	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
+	make -C $(MODULE_LINUX) M=$(PWD) clean
 
 load:
 	sudo dmesg -C
-	sudo insmod $(MODULE).ko
+	sudo insmod $(MODULE_NAME).ko
 	sudo dmesg -H
 
 unload:
 	sudo dmesg -C
-	sudo rmmod $(MODULE).ko
+	sudo rmmod $(MODULE_NAME).ko
 	sudo dmesg -H
 
-run: all load unload
+buildfs: all
+	cp -f $(MODULE_NAME).ko $(ROOTFS)
+	./scripts/build.sh $(ROOTFS) ../$(INITRAMFS)
 
-.PHONY: clean load unload run
+qemurun: buildfs
+	./scripts/qemu-run.sh $(LINUX_BUILD) ./$(INITRAMFS).gz
+
+run: all load unload 
+
+.PHONY: clean load unload buildfs qemurun
