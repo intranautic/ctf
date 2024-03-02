@@ -1,4 +1,4 @@
-MODULE_NAME := smpcall
+MODULE_NAME := keyhook
 MODULE_LINUX=/lib/modules/$(shell uname -r)/build
 ROOTFS=./rootfs
 INITRAMFS=initramfs.cpio
