@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+"""
+ok wellfuck ida has a builtin header parsing feature this is literally
+janky useless shit fuck fuck fuck
+"""
 import idaapi
 import idc
 import idautils
