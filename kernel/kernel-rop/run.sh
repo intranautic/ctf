@@ -3,7 +3,7 @@ gcc -static -o initramfs/xpl xpl.c
 cd initramfs;
 find . | cpio -o --format=newc > ../initramfs.cpio;
 cd ..;
-gzip -f initramfs.cpio;
+gzip -vf1 initramfs.cpio;
 
 qemu-system-x86_64 \
     -m 128M \
