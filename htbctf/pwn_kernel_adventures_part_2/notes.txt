@@ -1,1 +1,0 @@
-access to global nextId var is not serialized, so if we have two users with the same uid then we can trigger a double free.
