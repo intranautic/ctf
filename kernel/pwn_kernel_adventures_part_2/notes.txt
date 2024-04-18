@@ -1,0 +1,11 @@
+uaf in delete_user(), ptr in magic_users global array is not zeroed.
+struct MagicUser is 140 bytes including padded alignment, ends up in kmalloc-192
+slab cache. cred_struct is also in kmalloc-192, so we can use our uaf to overwrite
+creds during switch which is then comitted.
+
+new, new
+free a uaf in b, b top of freelist
+switch to b in g ptr: allocs cred inside b
+free b, top of freelist
+alloc new user, user buffer can overwrite uids of cred.
+write starts at cred struct magic, have to fake magic then just nulls for uids
