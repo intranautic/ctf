@@ -9,3 +9,9 @@ switch to b in g ptr: allocs cred inside b
 free b, top of freelist
 alloc new user, user buffer can overwrite uids of cred.
 write starts at cred struct magic, have to fake magic then just nulls for uids
+
+nevermind thats wrong processor specific slub kmem_cache & freelist, can instead
+overwrite freelist ptr and make allocator return ptr to userspace address. since no
+smep/smap kernel mode can access userspace vmmem & page tables.
+
+just overwrite kuid field in magicuser and switch, ez win

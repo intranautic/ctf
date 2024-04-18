@@ -6,3 +6,4 @@
 *.mod
 *.mod.c
 *.o.d
+initramfs
