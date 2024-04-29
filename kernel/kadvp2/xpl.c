@@ -33,7 +33,11 @@ static inline void user_init(user_t* user, const char* str) {
   return;
 }
 
-int main(int argc, char** argv) {
+static void pwn0(void) {
+
+}
+
+static void pwn1(void) {
   static INIT_USER(a);
   static INIT_USER(b);
   static INIT_USER(c);
@@ -81,6 +85,9 @@ int main(int argc, char** argv) {
     puts("getuid() == 0, xpl worked!");
     execve("/busybox", (char* const[]){"busybox", "sh"}, NULL);
   }
-  getchar();
-  return 0;
+  return;
+}
+
+int main(int argc, char** argv) {
+  pwn1();
 }

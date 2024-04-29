@@ -7,3 +7,6 @@
 *.mod.c
 *.o.d
 initramfs
+public
+dist
+
