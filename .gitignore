@@ -9,4 +9,4 @@
 initramfs
 public
 dist
-
+qemu-system*
