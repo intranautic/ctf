@@ -1,0 +1,4 @@
+looking at runtime dumps the vcpu contains the current state of the vcpu
+exported the guest program from the idb and from gdb (static/dynamic)
+runtime more useful, we can introspect layout of program. keep in mind
+that this is running in real mode

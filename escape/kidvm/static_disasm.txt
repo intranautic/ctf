@@ -1,0 +1,431 @@
+00000000  BC0030            mov sp,0x3000
+00000003  E80100            call 0x7
+00000006  F4                hlt
+00000007  B81702            mov ax,0x217
+0000000A  BB3000            mov bx,0x30
+0000000D  E8E301            call 0x1f3
+00000010  B84702            mov ax,0x247
+00000013  BB9400            mov bx,0x94
+00000016  E8DA01            call 0x1f3
+00000019  B83E03            mov ax,0x33e
+0000001C  BB0100            mov bx,0x1
+0000001F  E8E301            call 0x205
+00000022  BE3E03            mov si,0x33e
+00000025  8A04              mov al,[si]
+00000027  3C31              cmp al,0x31
+00000029  7423              jz 0x4e
+0000002B  3C32              cmp al,0x32
+0000002D  7424              jz 0x53
+0000002F  3C33              cmp al,0x33
+00000031  7425              jz 0x58
+00000033  3C34              cmp al,0x34
+00000035  7426              jz 0x5d
+00000037  3C35              cmp al,0x35
+00000039  7427              jz 0x62
+0000003B  3C36              cmp al,0x36
+0000003D  7428              jz 0x67
+0000003F  3C37              cmp al,0x37
+00000041  7429              jz 0x6c
+00000043  B8DB02            mov ax,0x2db
+00000046  BB0600            mov bx,0x6
+00000049  E8A701            call 0x1f3
+0000004C  EB1F              jmp short 0x6d
+0000004E  E81E00            call 0x6f
+00000051  EB1A              jmp short 0x6d
+00000053  E89200            call 0xe8
+00000056  EB15              jmp short 0x6d
+00000058  E8CE00            call 0x129
+0000005B  EB10              jmp short 0x6d
+0000005D  E8CA00            call 0x12a
+00000060  EB0B              jmp short 0x6d
+00000062  E8F200            call 0x157
+00000065  EB06              jmp short 0x6d
+00000067  E85901            call 0x1c3
+0000006A  EB01              jmp short 0x6d
+0000006C  C3                ret
+0000006D  EBA1              jmp short 0x10
+0000006F  50                push ax
+00000070  53                push bx
+00000071  51                push cx
+00000072  52                push dx
+00000073  56                push si
+00000074  57                push di
+00000075  B8E702            mov ax,0x2e7
+00000078  BB0500            mov bx,0x5
+0000007B  E87501            call 0x1f3
+0000007E  B84003            mov ax,0x340
+00000081  BB0200            mov bx,0x2
+00000084  E87E01            call 0x205
+00000087  A14003            mov ax,[0x340]
+0000008A  3D0010            cmp ax,0x1000
+0000008D  7733              ja 0xc2
+0000008F  8B0E4403          mov cx,[0x344]
+00000093  81F900B0          cmp cx,0xb000
+00000097  7734              ja 0xcd
+00000099  8B364203          mov si,[0x342]
+0000009D  83FE10            cmp si,byte +0x10
+000000A0  7336              jnc 0xd8
+000000A2  89CF              mov di,cx
+000000A4  81C10050          add cx,0x5000
+000000A8  01F6              add si,si
+000000AA  898C4603          mov [si+0x346],cx
+000000AE  89846603          mov [si+0x366],ax
+000000B2  01C7              add di,ax
+000000B4  893E4403          mov [0x344],di
+000000B8  A04203            mov al,[0x342]
+000000BB  FEC0              inc al
+000000BD  A24203            mov [0x342],al
+000000C0  EB1F              jmp short 0xe1
+000000C2  B8EC02            mov ax,0x2ec
+000000C5  BB0800            mov bx,0x8
+000000C8  E82801            call 0x1f3
+000000CB  EB14              jmp short 0xe1
+000000CD  B8F402            mov ax,0x2f4
+000000D0  BB3200            mov bx,0x32
+000000D3  E81D01            call 0x1f3
+000000D6  EB09              jmp short 0xe1
+000000D8  B82603            mov ax,0x326
+000000DB  BB1000            mov bx,0x10
+000000DE  E81201            call 0x1f3
+000000E1  5F                pop di
+000000E2  5E                pop si
+000000E3  5A                pop dx
+000000E4  59                pop cx
+000000E5  5B                pop bx
+000000E6  58                pop ax
+000000E7  C3                ret
+000000E8  50                push ax
+000000E9  53                push bx
+000000EA  51                push cx
+000000EB  52                push dx
+000000EC  56                push si
+000000ED  57                push di
+000000EE  B8E102            mov ax,0x2e1
+000000F1  BB0600            mov bx,0x6
+000000F4  E8FC00            call 0x1f3
+000000F7  B84303            mov ax,0x343
+000000FA  BB0100            mov bx,0x1
+000000FD  E80501            call 0x205
+00000100  B83603            mov ax,0x336
+00000103  BB0800            mov bx,0x8
+00000106  E8EA00            call 0x1f3
+00000109  A04303            mov al,[0x343]
+0000010C  3A064203          cmp al,[0x342]
+00000110  7310              jnc 0x122
+00000112  0FB6F0            movzx si,al
+00000115  01F6              add si,si
+00000117  8B844603          mov ax,[si+0x346]
+0000011B  8B9C6603          mov bx,[si+0x366]
+0000011F  E8E300            call 0x205
+00000122  5F                pop di
+00000123  5E                pop si
+00000124  5A                pop dx
+00000125  59                pop cx
+00000126  5B                pop bx
+00000127  58                pop ax
+00000128  C3                ret
+00000129  C3                ret
+0000012A  50                push ax
+0000012B  53                push bx
+0000012C  51                push cx
+0000012D  52                push dx
+0000012E  56                push si
+0000012F  57                push di
+00000130  B8E702            mov ax,0x2e7
+00000133  BB0500            mov bx,0x5
+00000136  E8BA00            call 0x1f3
+00000139  B84003            mov ax,0x340
+0000013C  BB0200            mov bx,0x2
+0000013F  E8C300            call 0x205
+00000142  680001            push word 0x100
+00000145  9D                popf
+00000146  8B1E4003          mov bx,[0x340]
+0000014A  B80001            mov ax,0x100
+0000014D  0F01C1            vmcall
+00000150  5F                pop di
+00000151  5E                pop si
+00000152  5A                pop dx
+00000153  59                pop cx
+00000154  5B                pop bx
+00000155  58                pop ax
+00000156  C3                ret
+00000157  50                push ax
+00000158  53                push bx
+00000159  51                push cx
+0000015A  52                push dx
+0000015B  56                push si
+0000015C  57                push di
+0000015D  B8E702            mov ax,0x2e7
+00000160  BB0500            mov bx,0x5
+00000163  E88D00            call 0x1f3
+00000166  B84003            mov ax,0x340
+00000169  BB0200            mov bx,0x2
+0000016C  E89600            call 0x205
+0000016F  A14003            mov ax,[0x340]
+00000172  3D0010            cmp ax,0x1000
+00000175  7745              ja 0x1bc
+00000177  B8E102            mov ax,0x2e1
+0000017A  BB0600            mov bx,0x6
+0000017D  E87300            call 0x1f3
+00000180  B84303            mov ax,0x343
+00000183  BB0100            mov bx,0x1
+00000186  E87C00            call 0x205
+00000189  B83603            mov ax,0x336
+0000018C  BB0800            mov bx,0x8
+0000018F  E86100            call 0x1f3
+00000192  B80040            mov ax,0x4000
+00000195  8B1E4003          mov bx,[0x340]
+00000199  E86900            call 0x205
+0000019C  680001            push word 0x100
+0000019F  9D                popf
+000001A0  B80201            mov ax,0x102
+000001A3  BB0100            mov bx,0x1
+000001A6  8A0E4303          mov cl,[0x343]
+000001AA  8B164003          mov dx,[0x340]
+000001AE  0F01C1            vmcall
+000001B1  EB09              jmp short 0x1bc
+000001B3  B8EC02            mov ax,0x2ec
+000001B6  BB0800            mov bx,0x8
+000001B9  E83700            call 0x1f3
+000001BC  5F                pop di
+000001BD  5E                pop si
+000001BE  5A                pop dx
+000001BF  59                pop cx
+000001C0  5B                pop bx
+000001C1  58                pop ax
+000001C2  C3                ret
+000001C3  50                push ax
+000001C4  53                push bx
+000001C5  51                push cx
+000001C6  52                push dx
+000001C7  56                push si
+000001C8  57                push di
+000001C9  B8E102            mov ax,0x2e1
+000001CC  BB0600            mov bx,0x6
+000001CF  E82100            call 0x1f3
+000001D2  B84303            mov ax,0x343
+000001D5  BB0100            mov bx,0x1
+000001D8  E82A00            call 0x205
+000001DB  680001            push word 0x100
+000001DE  9D                popf
+000001DF  B80101            mov ax,0x101
+000001E2  BB0300            mov bx,0x3
+000001E5  8A0E4303          mov cl,[0x343]
+000001E9  0F01C1            vmcall
+000001EC  5F                pop di
+000001ED  5E                pop si
+000001EE  5A                pop dx
+000001EF  59                pop cx
+000001F0  5B                pop bx
+000001F1  58                pop ax
+000001F2  C3                ret
+000001F3  51                push cx
+000001F4  52                push dx
+000001F5  56                push si
+000001F6  89D9              mov cx,bx
+000001F8  89C6              mov si,ax
+000001FA  8A04              mov al,[si]
+000001FC  E617              out 0x17,al
+000001FE  46                inc si
+000001FF  E2F9              loop 0x1fa
+00000201  5E                pop si
+00000202  5A                pop dx
+00000203  59                pop cx
+00000204  C3                ret
+00000205  51                push cx
+00000206  52                push dx
+00000207  56                push si
+00000208  89D9              mov cx,bx
+0000020A  89C6              mov si,ax
+0000020C  E417              in al,0x17
+0000020E  8804              mov [si],al
+00000210  46                inc si
+00000211  E2F9              loop 0x20c
+00000213  5E                pop si
+00000214  5A                pop dx
+00000215  59                pop cx
+00000216  C3                ret
+00000217  57                push di
+00000218  656C              gs insb
+0000021A  636F6D            arpl [bx+0x6d],bp
+0000021D  6520746F          and [gs:si+0x6f],dh
+00000221  207468            and [si+0x68],dh
+00000224  65205669          and [gs:bp+0x69],dl
+00000228  7274              jc 0x29e
+0000022A  7561              jnz 0x28d
+0000022C  6C                insb
+0000022D  20576F            and [bx+0x6f],dl
+00000230  726C              jc 0x29e
+00000232  64204D65          and [fs:di+0x65],cl
+00000236  6D                insw
+00000237  6F                outsw
+00000238  7279              jc 0x2b3
+0000023A  204D61            and [di+0x61],cl
+0000023D  6E                outsb
+0000023E  61                popa
+0000023F  67656D            gs a32 insw
+00000242  656E              gs outsb
+00000244  7421              jz 0x267
+00000246  0A5768            or dl,[bx+0x68]
+00000249  61                popa
+0000024A  7420              jz 0x26c
+0000024C  646F              fs outsw
+0000024E  20796F            and [bx+di+0x6f],bh
+00000251  7520              jnz 0x273
+00000253  7761              ja 0x2b6
+00000255  6E                outsb
+00000256  7420              jz 0x278
+00000258  746F              jz 0x2c9
+0000025A  20646F            and [si+0x6f],ah
+0000025D  3F                aas
+0000025E  0A31              or dh,[bx+di]
+00000260  2E41              cs inc cx
+00000262  6C                insb
+00000263  6C                insb
+00000264  6F                outsw
+00000265  6320              arpl [bx+si],sp
+00000267  6D                insw
+00000268  656D              gs insw
+0000026A  6F                outsw
+0000026B  7279              jc 0x2e6
+0000026D  0A32              or dh,[bp+si]
+0000026F  2E55              cs push bp
+00000271  7064              jo 0x2d7
+00000273  61                popa
+00000274  7465              jz 0x2db
+00000276  206D65            and [di+0x65],ch
+00000279  6D                insw
+0000027A  6F                outsw
+0000027B  7279              jc 0x2f6
+0000027D  0A33              or dh,[bp+di]
+0000027F  2E46              cs inc si
+00000281  7265              jc 0x2e8
+00000283  65206D65          and [gs:di+0x65],ch
+00000287  6D                insw
+00000288  6F                outsw
+00000289  7279              jc 0x304
+0000028B  0A34              or dh,[si]
+0000028D  2E41              cs inc cx
+0000028F  6C                insb
+00000290  6C                insb
+00000291  6F                outsw
+00000292  6320              arpl [bx+si],sp
+00000294  686F73            push word 0x736f
+00000297  7420              jz 0x2b9
+00000299  6D                insw
+0000029A  656D              gs insw
+0000029C  6F                outsw
+0000029D  7279              jc 0x318
+0000029F  0A35              or dh,[di]
+000002A1  2E55              cs push bp
+000002A3  7064              jo 0x309
+000002A5  61                popa
+000002A6  7465              jz 0x30d
+000002A8  20686F            and [bx+si+0x6f],ch
+000002AB  7374              jnc 0x321
+000002AD  206D65            and [di+0x65],ch
+000002B0  6D                insw
+000002B1  6F                outsw
+000002B2  7279              jc 0x32d
+000002B4  0A362E46          or dh,[0x462e]
+000002B8  7265              jc 0x31f
+000002BA  6520686F          and [gs:bx+si+0x6f],ch
+000002BE  7374              jnc 0x334
+000002C0  206D65            and [di+0x65],ch
+000002C3  6D                insw
+000002C4  6F                outsw
+000002C5  7279              jc 0x340
+000002C7  0A37              or dh,[bx]
+000002C9  2E45              cs inc bp
+000002CB  7869              js 0x336
+000002CD  740A              jz 0x2d9
+000002CF  59                pop cx
+000002D0  6F                outsw
+000002D1  7572              jnz 0x345
+000002D3  206368            and [bp+di+0x68],ah
+000002D6  6F                outsw
+000002D7  6963653A57        imul sp,[bp+di+0x65],word 0x573a
+000002DC  726F              jc 0x34d
+000002DE  6E                outsb
+000002DF  670A496E          or cl,[ecx+0x6e]
+000002E3  6465783A          gs js 0x321
+000002E7  53                push bx
+000002E8  697A653A54        imul di,[bp+si+0x65],word 0x543a
+000002ED  6F                outsw
+000002EE  6F                outsw
+000002EF  206269            and [bp+si+0x69],ah
+000002F2  670A4775          or al,[edi+0x75]
+000002F6  657374            gs jnc 0x36d
+000002F9  206D65            and [di+0x65],ch
+000002FC  6D                insw
+000002FD  6F                outsw
+000002FE  7279              jc 0x379
+00000300  206973            and [bx+di+0x73],ch
+00000303  206675            and [bp+0x75],ah
+00000306  6C                insb
+00000307  6C                insb
+00000308  2120              and [bx+si],sp
+0000030A  50                push ax
+0000030B  6C                insb
+0000030C  6561              gs popa
+0000030E  7365              jnc 0x375
+00000310  207573            and [di+0x73],dh
+00000313  65207468          and [gs:si+0x68],dh
+00000317  6520686F          and [gs:bx+si+0x6f],ch
+0000031B  7374              jnc 0x391
+0000031D  206D65            and [di+0x65],ch
+00000320  6D                insw
+00000321  6F                outsw
+00000322  7279              jc 0x39d
+00000324  210A              and [bp+si],cx
+00000326  54                push sp
+00000327  6F                outsw
+00000328  6F                outsw
+00000329  206D61            and [di+0x61],ch
+0000032C  6E                outsb
+0000032D  7920              jns 0x34f
+0000032F  6D                insw
+00000330  656D              gs insw
+00000332  6F                outsw
+00000333  7279              jc 0x3ae
+00000335  0A436F            or al,[bp+di+0x6f]
+00000338  6E                outsb
+00000339  7465              jz 0x3a0
+0000033B  6E                outsb
+0000033C  743A              jz 0x378
+0000033E  0000              add [bx+si],al
+00000340  0000              add [bx+si],al
+00000342  0000              add [bx+si],al
+00000344  0000              add [bx+si],al
+00000346  0000              add [bx+si],al
+00000348  0000              add [bx+si],al
+0000034A  0000              add [bx+si],al
+0000034C  0000              add [bx+si],al
+0000034E  0000              add [bx+si],al
+00000350  0000              add [bx+si],al
+00000352  0000              add [bx+si],al
+00000354  0000              add [bx+si],al
+00000356  0000              add [bx+si],al
+00000358  0000              add [bx+si],al
+0000035A  0000              add [bx+si],al
+0000035C  0000              add [bx+si],al
+0000035E  0000              add [bx+si],al
+00000360  0000              add [bx+si],al
+00000362  0000              add [bx+si],al
+00000364  0000              add [bx+si],al
+00000366  0000              add [bx+si],al
+00000368  0000              add [bx+si],al
+0000036A  0000              add [bx+si],al
+0000036C  0000              add [bx+si],al
+0000036E  0000              add [bx+si],al
+00000370  0000              add [bx+si],al
+00000372  0000              add [bx+si],al
+00000374  0000              add [bx+si],al
+00000376  0000              add [bx+si],al
+00000378  0000              add [bx+si],al
+0000037A  0000              add [bx+si],al
+0000037C  0000              add [bx+si],al
+0000037E  0000              add [bx+si],al
+00000380  0000              add [bx+si],al
+00000382  0000              add [bx+si],al
+00000384  0000              add [bx+si],al
