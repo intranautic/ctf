@@ -2,3 +2,11 @@ looking at runtime dumps the vcpu contains the current state of the vcpu
 exported the guest program from the idb and from gdb (static/dynamic)
 runtime more useful, we can introspect layout of program. keep in mind
 that this is running in real mode
+
+relevant offsets:
+stack: 0x3000
+heap:  0x4000
+
+ah ok IVT should be on guest-phys 0x00 page but since interaction via port i/o
+and no peripheral emulation no external intr.
+

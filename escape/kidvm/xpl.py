@@ -15,6 +15,9 @@ else:
   p = binary.process(env={})
 
 
+s(b'\x04'.join([
+
+]) + b'\x04')
 
 p.interactive()
 
