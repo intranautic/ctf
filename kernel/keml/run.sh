@@ -3,6 +3,8 @@
 BUILDS=/home/vagrant/mini_linux/
 LINUX_BUILD=$BUILDS/linux/
 
+musl-gcc -static -o rootfs/xpl xpl.c
+build_initramfs.sh ./rootfs
 qemu-system-x86_64 \
 	-cpu qemu64,-smep,-smap \
 	-kernel bzImage \
