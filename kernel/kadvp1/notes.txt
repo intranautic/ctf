@@ -1,0 +1,7 @@
+no locking, vulnerable to toctou due to global storage for some vars
+not exactlyt sure what the hash functionality has to do with this but
+im assuyming its relevant..
+
+strange challenge indeed.
+
+CIGARETE BTREAAAAKAKKK AAAHAHAHAHAHAHA 
