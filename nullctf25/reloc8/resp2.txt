@@ -1,0 +1,8 @@
+'Code (base64): cage=0x3f6b00000000 inst=0x3f6b01019110 td=0x3f6b0104087c jump_table=0x00001e998ba3b000'
+'sc[0] readback = 0xb848d231fa1e0ff3 (want 0xb848d231fa1e0ff3)'
+'sc[10] readback = 0x050fff310000003c (want 0x050fff310000003c)'
+'calling wf()...'
+'nullctf{wow}'
+''
+--- nullctf lines ---
+nullctf{wow}

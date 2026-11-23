@@ -1,0 +1,45 @@
+
+set pagination off
+set confirm off
+set debuginfod enabled off
+file /home/folly/ctf/pwnable.tw/babyalloc/babyallocator232
+set exec-wrapper env LD_LIBRARY_PATH=/home/folly/ctf/pwnable.tw/babyalloc
+break *0x400e40
+commands
+silent
+set $pc = *(unsigned long*)$rsp
+set $rsp = $rsp + 8
+set $rax = 0
+continue
+end
+break *0x401350
+commands
+silent
+printf "GUARDCHK rsp=%p size1=%p guard=%p cur=%p\n", $rsp, $rax, *(unsigned long*)($fs_base+0x70), *(unsigned long*)($fs_base-16)
+continue
+end
+break *0x40146a
+commands
+silent
+printf "WRITE ptr=%p size=%d\n", $rdi, $esi
+continue
+end
+break *0x4013a7
+commands
+silent
+if *(unsigned long*)($fs_base-16) != 0
+  set $seg = *(unsigned long*)($fs_base-16)
+  printf "SCANRET rsp=%p HDR: prev=%p next=%p size=%p oldstk=%p dyn=%p free=%p\n", $rsp, *(unsigned long*)($seg+0), *(unsigned long*)($seg+8), *(unsigned long*)($seg+0x10), *(unsigned long*)($seg+0x18), *(unsigned long*)($seg+0x20), *(unsigned long*)($seg+0x28)
+else
+  printf "SCANRET rsp=%p (init)\n", $rsp
+end
+continue
+end
+break *0x40136f
+commands
+silent
+printf "  BLOCK=%p\n", $rax
+continue
+end
+run
+quit

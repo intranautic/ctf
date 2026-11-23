@@ -1,0 +1,7 @@
+cage=0x32a100000000 inst=0x32a101019110 td=0x32a10104087c jump_table=0x00001960069e5000
+sc[0] readback = 0xb848d231fa1e0ff3 (want 0xb848d231fa1e0ff3)
+sc[10] readback = 0x050fff310000003c (want 0x050fff310000003c)
+calling wf()...
+nullctf{wow}
+nullctf{local_test_flag}
+EXIT=0

@@ -1,0 +1,131 @@
+execve("./d8", ["./d8", "--allow-natives-syntax", "t5.js"], 0x7fffffffe168 /* 24 vars */) = 0
+strace: Process 1346507 attached
+strace: Process 1346508 attached
+strace: Process 1346509 attached
+strace: Process 1346510 attached
+strace: Process 1346511 attached
+strace: Process 1346512 attached
+strace: Process 1346513 attached
+strace: Process 1346514 attached
+strace: Process 1346515 attached
+strace: Process 1346516 attached
+strace: Process 1346517 attached
+strace: Process 1346518 attached
+strace: Process 1346519 attached
+strace: Process 1346520 attached
+strace: Process 1346521 attached
+strace: Process 1346522 attached
+strace: Process 1346523 attached
+strace: Process 1346524 attached
+strace: Process 1346525 attached
+strace: Process 1346526 attached
+strace: Process 1346527 attached
+strace: Process 1346528 attached
+strace: Process 1346529 attached
+strace: Process 1346530 attached
+strace: Process 1346531 attached
+strace: Process 1346532 attached
+strace: Process 1346533 attached
+strace: Process 1346534 attached
+strace: Process 1346535 attached
+strace: Process 1346536 attached
+strace: Process 1346537 attached
+strace: Process 1346538 attached
+strace: Process 1346539 attached
+strace: Process 1346540 attached
+strace: Process 1346541 attached
+strace: Process 1346542 attached
+strace: Process 1346543 attached
+strace: Process 1346544 attached
+strace: Process 1346545 attached
+strace: Process 1346546 attached
+strace: Process 1346547 attached
+strace: Process 1346548 attached
+strace: Process 1346549 attached
+strace: Process 1346550 attached
+strace: Process 1346551 attached
+strace: Process 1346552 attached
+strace: Process 1346553 attached
+strace: Process 1346554 attached
+cage=0xd7400000000 inst=0xd740101910c td=0xd740104087c jump_table=0x000022a699897000
+sc[0] readback = 0xb848d231fa1e0ff3 (want 0xb848d231fa1e0ff3)
+sc[10] readback = 0x050fff310000003c (want 0x90909090050fff)
+calling wf()...
+[pid 1346506] execve("", ["/bin/sh", "-c", "cat flag_*.txt"], NULL) = -1 ENOENT (No such file or directory)
+[pid 1346506] exit(0)                   = ?
+strace: Process 1346507 detached
+strace: Process 1346508 detached
+
+
+#
+# Fatal error in , line 0
+# d8: Received SIGTERM signal (likely due to a TIMEOUT)
+
+#
+#
+#
+#FailureMessage Object: 0x7ffff7bfdbe0strace: Process 1346509 detached
+strace: Process 1346510 detached
+
+==== C stack trace ===============================
+
+strace: Process 1346511 detached
+strace: Process 1346512 detached
+strace: Process 1346513 detached
+strace: Process 1346514 detached
+strace: Process 1346515 detached
+strace: Process 1346516 detached
+strace: Process 1346517 detached
+strace: Process 1346518 detached
+strace: Process 1346519 detached
+strace: Process 1346520 detached
+strace: Process 1346521 detached
+strace: Process 1346522 detached
+strace: Process 1346523 detached
+strace: Process 1346524 detached
+strace: Process 1346525 detached
+strace: Process 1346526 detached
+strace: Process 1346527 detached
+strace: Process 1346528 detached
+strace: Process 1346529 detached
+strace: Process 1346530 detached
+strace: Process 1346531 detached
+strace: Process 1346532 detached
+strace: Process 1346533 detached
+strace: Process 1346534 detached
+strace: Process 1346535 detached
+strace: Process 1346536 detached
+strace: Process 1346537 detached
+strace: Process 1346538 detached
+strace: Process 1346539 detached
+strace: Process 1346540 detached
+strace: Process 1346541 detached
+strace: Process 1346542 detached
+strace: Process 1346543 detached
+strace: Process 1346544 detached
+strace: Process 1346545 detached
+strace: Process 1346547 detached
+strace: Process 1346548 detached
+strace: Process 1346549 detached
+strace: Process 1346550 detached
+strace: Process 1346551 detached
+strace: Process 1346552 detached
+strace: Process 1346553 detached
+strace: Process 1346554 detached
+strace: Process 1346546 detached
+    ./d8(v8::base::debug::StackTrace::StackTrace()+0x13) [0x555558441a33]
+    ./d8(+0x2eecf2b) [0x555558440f2b]
+    ./d8(V8_Fatal(char const*, ...)+0x188) [0x555558433238]
+    ./d8(+0x16ce577) [0x555556c22577]
+    /usr/lib/x86_64-linux-gnu/libc.so.6(+0x45cb0) [0x7ffff7c45cb0]
+    /usr/lib/x86_64-linux-gnu/libc.so.6(syscall+0x1d) [0x7ffff7d34a8d]
+    ./d8(+0x22fd1a8) [0x5555578511a8]
+    ./d8(+0x22fd24b) [0x55555785124b]
+    ./d8(+0x22fd37b) [0x55555785137b]
+    ./d8(+0x22ff674) [0x555557853674]
+    ./d8(v8::platform::DefaultWorkerThreadsTaskRunner::WorkerThread::Run()+0x180) [0x5555584469d0]
+    ./d8(+0x2eeae46) [0x55555843ee46]
+    /usr/lib/x86_64-linux-gnu/libc.so.6(+0xa3dba) [0x7ffff7ca3dba]
+    /usr/lib/x86_64-linux-gnu/libc.so.6(+0x13758c) [0x7ffff7d3758c]
+strace: Process 1346506 detached
+EXIT=124
