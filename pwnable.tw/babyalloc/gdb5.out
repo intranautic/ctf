@@ -1,0 +1,20 @@
+Loading GEF...
+[32mGEF[0m is ready, type '[4m[33mgef[0m' to start, '[4m[35mgef config[0m' to configure
+Loaded [1m[32m494[0m commands (+[1m[32m130[0m aliases) for GDB [1m[33m17.1[0m using Python engine [1m[31m3.14[0m
+[1m[34m[+][0m Could not find /home/folly/.gef.rc, GEF uses default settings
+Breakpoint 1 at 0x4013a2
+Breakpoint 2 at 0x4013a7
+Breakpoint 3 at 0x401350
+Breakpoint 4 at 0x40146a
+gdbscript.txt:55: Error in sourced command file:
+Warning:
+Cannot insert breakpoint 3.
+Cannot access memory at address 0x401350
+Cannot insert breakpoint 1.
+Cannot access memory at address 0x4013a2
+Cannot insert breakpoint 2.
+Cannot access memory at address 0x4013a7
+Cannot insert breakpoint 4.
+Cannot access memory at address 0x40146a
+
+DRIVER ERR [Errno 32] Broken pipe

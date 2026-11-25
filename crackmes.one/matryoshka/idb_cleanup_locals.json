@@ -1,0 +1,87 @@
+[
+  {
+    "old_name": "vm1_lcg_state",
+    "name": "vm1_lcg_state",
+    "type": "vm_u32"
+  },
+  {
+    "old_name": "vm1_opcode",
+    "name": "vm1_opcode",
+    "type": "Vm1Opcode"
+  },
+  {
+    "old_name": "message_plain_cursor",
+    "name": "message_plain_cursor",
+    "type": "vm_u8 *"
+  },
+  {
+    "old_name": "vm2_xorshift_state",
+    "name": "vm2_xorshift_state",
+    "type": "vm_u32"
+  },
+  {
+    "old_name": "input_length_2",
+    "name": "vm1_input_index",
+    "type": null
+  },
+  {
+    "old_name": "vm3_opcode",
+    "name": "vm3_opcode",
+    "type": "Vm3Opcode"
+  },
+  {
+    "old_name": "input_length_3",
+    "name": "vm2_input_index",
+    "type": null
+  },
+  {
+    "old_name": "input_length_4",
+    "name": "vm3_input_index",
+    "type": null
+  },
+  {
+    "old_name": "standard_stream",
+    "name": "stdout_on_success",
+    "type": null
+  },
+  {
+    "old_name": "vm4_plain_simd_cursor",
+    "name": "vm4_plain_simd_cursor",
+    "type": "vm_u8 *"
+  },
+  {
+    "old_name": "vm4_instruction_word",
+    "name": "vm4_instruction_word",
+    "type": "vm_u32"
+  },
+  {
+    "old_name": "vm5_error",
+    "name": "vm5_error",
+    "type": "vm_u32"
+  },
+  {
+    "old_name": "vm5_accumulator",
+    "name": "vm5_accumulator",
+    "type": "vm_u32"
+  },
+  {
+    "old_name": "vm5_opcode",
+    "name": "vm5_opcode",
+    "type": "Vm5Opcode"
+  },
+  {
+    "old_name": "input_length_5",
+    "name": "vm4_input_index",
+    "type": null
+  },
+  {
+    "old_name": "input_length_6",
+    "name": "vm5_input_index",
+    "type": null
+  },
+  {
+    "old_name": "input_length_1",
+    "name": "password_length",
+    "type": null
+  }
+]

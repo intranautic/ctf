@@ -1,0 +1,339 @@
+Loading GEF...
+[32mGEF[0m is ready, type '[4m[33mgef[0m' to start, '[4m[35mgef config[0m' to configure
+Loaded [1m[32m494[0m commands (+[1m[32m130[0m aliases) for GDB [1m[33m17.1[0m using Python engine [1m[31m3.14[0m
+[1m[34m[+][0m Could not find /home/folly/.gef.rc, GEF uses default settings
+Breakpoint 1 at 0x400e40
+Breakpoint 2 at 0x401350
+Breakpoint 3 at 0x401362
+Breakpoint 4 at 0x401369
+Breakpoint 5 at 0x4017d0
+Breakpoint 6 at 0x401641
+Breakpoint 7 at 0x401e30
+Breakpoint 8 at 0x40136f
+Breakpoint 9 at 0x40146a
+Breakpoint 10 at 0x4013a7
+==========================
+      Baby Allocator      
+==========================
+ 1.Alloca on stack        
+ 2.Alloca on heap         
+ 3.Write data             
+ 4.Create a new allocator 
+ 5.Release the allocator  
+ 6.Exit                   
+==========================
+Your choice:Size :GUARDCHK rsp=0x7fffffffdd80 size1=0x1010 guard=0x7fffffff9f08 cur=(nil)
+  STACKPATH rsp_after=0x7fffffffdd80
+  BLOCK=0x7fffffffcd70 guard=0x7fffffff9f08
+What's name of the allocator ? :SCANRET rsp=0x7fffffffcd70
+==========================
+      Baby Allocator      
+==========================
+ 1.Alloca on stack        
+ 2.Alloca on heap         
+ 3.Write data             
+ 4.Create a new allocator 
+ 5.Release the allocator  
+ 6.Exit                   
+==========================
+Your choice:==========================
+      Baby Allocator      
+==========================
+ 1.Alloca on stack        
+ 2.Alloca on heap         
+ 3.Write data             
+ 4.Create a new allocator 
+ 5.Release the allocator  
+ 6.Exit                   
+==========================
+Your choice:Size :GUARDCHK rsp=0x7fffffffcd30 size1=0x1010 guard=0x7fffffff9f08 cur=(nil)
+  STACKPATH rsp_after=0x7fffffffcd30
+  BLOCK=0x7fffffffbd20 guard=0x7fffffff9f08
+What's name of the allocator ? :SCANRET rsp=0x7fffffffbd20
+==========================
+      Baby Allocator      
+==========================
+ 1.Alloca on stack        
+ 2.Alloca on heap         
+ 3.Write data             
+ 4.Create a new allocator 
+ 5.Release the allocator  
+ 6.Exit                   
+==========================
+Your choice:==========================
+      Baby Allocator      
+==========================
+ 1.Alloca on stack        
+ 2.Alloca on heap         
+ 3.Write data             
+ 4.Create a new allocator 
+ 5.Release the allocator  
+ 6.Exit                   
+==========================
+Your choice:Size :GUARDCHK rsp=0x7fffffffbce0 size1=0x1010 guard=0x7fffffff9f08 cur=(nil)
+  STACKPATH rsp_after=0x7fffffffbce0
+  BLOCK=0x7fffffffacd0 guard=0x7fffffff9f08
+What's name of the allocator ? :SCANRET rsp=0x7fffffffacd0
+==========================
+      Baby Allocator      
+==========================
+ 1.Alloca on stack        
+ 2.Alloca on heap         
+ 3.Write data             
+ 4.Create a new allocator 
+ 5.Release the allocator  
+ 6.Exit                   
+==========================
+Your choice:==========================
+      Baby Allocator      
+==========================
+ 1.Alloca on stack        
+ 2.Alloca on heap         
+ 3.Write data             
+ 4.Create a new allocator 
+ 5.Release the allocator  
+ 6.Exit                   
+==========================
+Your choice:Size :GUARDCHK rsp=0x7fffffffac90 size1=0xa10 guard=0x7fffffff9f08 cur=(nil)
+  STACKPATH rsp_after=0x7fffffffac90
+  BLOCK=0x7fffffffa280 guard=0x7fffffff9f08
+What's name of the allocator ? :SCANRET rsp=0x7fffffffa280
+==========================
+      Baby Allocator      
+==========================
+ 1.Alloca on stack        
+ 2.Alloca on heap         
+ 3.Write data             
+ 4.Create a new allocator 
+ 5.Release the allocator  
+ 6.Exit                   
+==========================
+Your choice:==========================
+      Baby Allocator      
+==========================
+ 1.Alloca on stack        
+ 2.Alloca on heap         
+ 3.Write data             
+ 4.Create a new allocator 
+ 5.Release the allocator  
+ 6.Exit                   
+==========================
+Your choice:Size :GUARDCHK rsp=0x7fffffffa240 size1=0x220 guard=0x7fffffff9f08 cur=(nil)
+  STACKPATH rsp_after=0x7fffffffa240
+  BLOCK=0x7fffffffa020 guard=0x7fffffff9f08
+What's name of the allocator ? :SCANRET rsp=0x7fffffffa020
+==========================
+      Baby Allocator      
+==========================
+ 1.Alloca on stack        
+ 2.Alloca on heap         
+ 3.Write data             
+ 4.Create a new allocator 
+ 5.Release the allocator  
+ 6.Exit                   
+==========================
+Your choice:==========================
+      Baby Allocator      
+==========================
+ 1.Alloca on stack        
+ 2.Alloca on heap         
+ 3.Write data             
+ 4.Create a new allocator 
+ 5.Release the allocator  
+ 6.Exit                   
+==========================
+Your choice:Size :GUARDCHK rsp=0x7fffffff9fe0 size1=0x410 guard=0x7fffffff9f08 cur=(nil)
+  HEAPPATH req=0x41f
+ALLOCSP size=0x41f curseg=(nil) segs=(nil)
+  BLOCK=0x605030 guard=0x7fffffff9f08
+What's name of the allocator ? :SCANRET rsp=0x7fffffff9fe0
+==========================
+      Baby Allocator      
+==========================
+ 1.Alloca on stack        
+ 2.Alloca on heap         
+ 3.Write data             
+ 4.Create a new allocator 
+ 5.Release the allocator  
+ 6.Exit                   
+==========================
+Your choice:==========================
+      Baby Allocator      
+==========================
+ 1.Alloca on stack        
+ 2.Alloca on heap         
+ 3.Write data             
+ 4.Create a new allocator 
+ 5.Release the allocator  
+ 6.Exit                   
+==========================
+Your choice:Size :GUARDCHK rsp=0x7fffffff9fa0 size1=0x410 guard=0x7fffffff9f08 cur=(nil)
+  HEAPPATH req=0x41f
+ALLOCSP size=0x41f curseg=(nil) segs=(nil)
+  BLOCK=0x605480 guard=0x7fffffff9f08
+What's name of the allocator ? :SCANRET rsp=0x7fffffff9fa0
+==========================
+      Baby Allocator      
+==========================
+ 1.Alloca on stack        
+ 2.Alloca on heap         
+ 3.Write data             
+ 4.Create a new allocator 
+ 5.Release the allocator  
+ 6.Exit                   
+==========================
+Your choice:==========================
+      Baby Allocator      
+==========================
+ 1.Alloca on stack        
+ 2.Alloca on heap         
+ 3.Write data             
+ 4.Create a new allocator 
+ 5.Release the allocator  
+ 6.Exit                   
+==========================
+Your choice:Size :GUARDCHK rsp=0x7fffffff9f60 size1=0x410 guard=0x7fffffff9f08 cur=(nil)
+  HEAPPATH req=0x41f
+ALLOCSP size=0x41f curseg=(nil) segs=(nil)
+  BLOCK=0x6058d0 guard=0x7fffffff9f08
+What's name of the allocator ? :SCANRET rsp=0x7fffffff9f60
+==========================
+      Baby Allocator      
+==========================
+ 1.Alloca on stack        
+ 2.Alloca on heap         
+ 3.Write data             
+ 4.Create a new allocator 
+ 5.Release the allocator  
+ 6.Exit                   
+==========================
+Your choice:==========================
+      Baby Allocator      
+==========================
+ 1.Alloca on stack        
+ 2.Alloca on heap         
+ 3.Write data             
+ 4.Create a new allocator 
+ 5.Release the allocator  
+ 6.Exit                   
+==========================
+Your choice:GENERIC_MORESTACK frame=0x628
+GENERIC_MORESTACK frame=0x618
+Size :GENERIC_MORESTACK frame=0x628
+GUARDCHK rsp=0x7fffffff9f20 size1=0x410 guard=0x7fffffffa520 cur=(nil)
+  HEAPPATH req=0x41f
+ALLOCSP size=0x41f curseg=(nil) segs=0x7ffff7fe9000
+  BLOCK=0x605d20 guard=0x7fffffffa520
+GENERIC_MORESTACK frame=0x618
+What's name of the allocator ? :SCANRET rsp=0x7fffffff9f20
+GENERIC_MORESTACK frame=0x608
+==========================
+      Baby Allocator      
+==========================
+ 1.Alloca on stack        
+ 2.Alloca on heap         
+ 3.Write data             
+ 4.Create a new allocator 
+ 5.Release the allocator  
+ 6.Exit                   
+==========================
+Your choice:GENERIC_MORESTACK frame=0x628
+GENERIC_MORESTACK frame=0x638
+==========================
+      Baby Allocator      
+==========================
+ 1.Alloca on stack        
+ 2.Alloca on heap         
+ 3.Write data             
+ 4.Create a new allocator 
+ 5.Release the allocator  
+ 6.Exit                   
+==========================
+Your choice:Size :GUARDCHK rsp=0x7ffff7fe9fc0 size1=0x410 guard=0x7ffff7fe9638 cur=0x7ffff7fe9000
+  STACKPATH rsp_after=0x7ffff7fe9fc0
+  BLOCK=0x7ffff7fe9bb0 guard=0x7ffff7fe9638
+What's name of the allocator ? :SCANRET rsp=0x7ffff7fe9bb0
+HDR 0x7ffff7fe9000: prev=(nil) next=(nil) size=0xfc8 oldstk=0x7fffffff9f20 dyn=(nil) free=(nil)
+==========================
+      Baby Allocator      
+==========================
+ 1.Alloca on stack        
+ 2.Alloca on heap         
+ 3.Write data             
+ 4.Create a new allocator 
+ 5.Release the allocator  
+ 6.Exit                   
+==========================
+Your choice:==========================
+      Baby Allocator      
+==========================
+ 1.Alloca on stack        
+ 2.Alloca on heap         
+ 3.Write data             
+ 4.Create a new allocator 
+ 5.Release the allocator  
+ 6.Exit                   
+==========================
+Your choice:Size :GUARDCHK rsp=0x7ffff7fe9b70 size1=0x710 guard=0x7ffff7fe9638 cur=0x7ffff7fe9000
+  HEAPPATH req=0x71f
+ALLOCSP size=0x71f curseg=0x7ffff7fe9000 segs=0x7ffff7fe9000
+  BLOCK=0x606170 guard=0x7ffff7fe9638
+What's name of the allocator ? :SCANRET rsp=0x7ffff7fe9b70
+HDR 0x7ffff7fe9000: prev=(nil) next=(nil) size=0xfc8 oldstk=0x7fffffff9f20 dyn=0x606150 free=(nil)
+==========================
+      Baby Allocator      
+==========================
+ 1.Alloca on stack        
+ 2.Alloca on heap         
+ 3.Write data             
+ 4.Create a new allocator 
+ 5.Release the allocator  
+ 6.Exit                   
+==========================
+Your choice:==========================
+      Baby Allocator      
+==========================
+ 1.Alloca on stack        
+ 2.Alloca on heap         
+ 3.Write data             
+ 4.Create a new allocator 
+ 5.Release the allocator  
+ 6.Exit                   
+==========================
+Your choice:Size :GUARDCHK rsp=0x7ffff7fe9b30 size1=0x310 guard=0x7ffff7fe9638 cur=0x7ffff7fe9000
+  STACKPATH rsp_after=0x7ffff7fe9b30
+  BLOCK=0x7ffff7fe9820 guard=0x7ffff7fe9638
+What's name of the allocator ? :SCANRET rsp=0x7ffff7fe9820
+HDR 0x7ffff7fe9000: prev=(nil) next=(nil) size=0x7ffff7dc38e0 oldstk=0x7ffff7a7a5e8 dyn=0x606150 free=0x7ffff7dc38e0
+==========================
+      Baby Allocator      
+==========================
+ 1.Alloca on stack        
+ 2.Alloca on heap         
+ 3.Write data             
+ 4.Create a new allocator 
+ 5.Release the allocator  
+ 6.Exit                   
+==========================
+Your choice:==========================
+      Baby Allocator      
+==========================
+ 1.Alloca on stack        
+ 2.Alloca on heap         
+ 3.Write data             
+ 4.Create a new allocator 
+ 5.Release the allocator  
+ 6.Exit                   
+==========================
+Your choice:Size :GUARDCHK rsp=0x7ffff7fe97e0 size1=0x1010 guard=0x7ffff7fe9638 cur=0x7ffff7fe9000
+  HEAPPATH req=0x101f
+ALLOCSP size=0x101f curseg=0x7ffff7fe9000 segs=0x7ffff7fe9000
+  BLOCK=0x7ffff7dc3964 guard=0x7ffff7fe9638
+What's name of the allocator ? :Traceback (most recent call last):
+  File "/home/folly/ctf/pwnable.tw/babyalloc/dryrun.py", line 135, in <module>
+    until(b'Your choice:'); send(b'3\n')
+                            ~~~~^^^^^^^^
+  File "/home/folly/ctf/pwnable.tw/babyalloc/dryrun.py", line 89, in send
+    p.stdin.write(chunk)
+    ~~~~~~~~~~~~~^^^^^^^
+BrokenPipeError: [Errno 32] Broken pipe

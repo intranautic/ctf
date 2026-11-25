@@ -1,0 +1,36 @@
+
+set pagination off
+set confirm off
+file ./babyallocator
+break *0x401350
+commands
+silent
+printf "GUARDCHECK rsp=%p rax(size1)=%p guard=%p\n", $rsp, $rax, *(unsigned long*)($fs_base+0x70)
+continue
+end
+break *0x401369
+commands
+silent
+printf "  -> STACK path: rsp=%p\n", $rsp
+continue
+end
+break *0x401362
+commands
+silent
+printf "  -> MORESTACK path: size=%p rsp=%p\n", $rdi, $rsp
+continue
+end
+break *0x4017d0
+commands
+silent
+printf "__generic_morestack frame=%p param=%p\n", *(unsigned long*)$rdi, $rdx
+continue
+end
+break *0x401e30
+commands
+silent
+printf "allocate_stack_space size=%p\n", $rdi
+continue
+end
+run < input.txt
+quit
